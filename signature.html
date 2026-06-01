@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAFS - Email Signature Generator</title>
+    <link rel="stylesheet" href ="assets/style.css">
+    <script type="text/javascript" defer src="assets/script.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="form-panel">
+        <h2>Signature Details</h2>
+        
+        <h3>Personal Information</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" value="First" oninput="generateSignature()">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" value="Last" oninput="generateSignature()">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="title">Job Title</label>
+                <input type="text" id="title" value="Job Title" oninput="generateSignature()">
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" id="department" value="Department" oninput="generateSignature()">
+            </div>
+        </div>
+
+        <h3>Contact Information</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" value="(555) 555-5555" oninput="generateSignature()">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" value="email@email.com" oninput="generateSignature()">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="website">Website URL (Display)</label>
+                <input type="text" id="website" value="www.nafsbenefits.com" oninput="generateSignature()">
+            </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+            <label for="address">Office Address</label>
+            <input type="text" id="address" value="2300 E. Katella Avenue, Suite 450, Anaheim, CA 92806" oninput="generateSignature()">
+        </div>
+
+        <h3>Images (Assets)</h3>
+        <div class="form-group" style="margin-bottom: 15px;">
+            <label for="avatarUrl">Profile Portrait URL</label>
+            <input type="text" id="avatarUrl" value="https://live.staticflickr.com/65535/55266868610_2b4c3dfe88_n.jpg" oninput="generateSignature()">
+        </div>
+
+        <h3>Compliance / Disclaimer</h3>
+        <div class="form-group">
+            <label for="disclaimer">Legal Text (Optional)</label>
+            <textarea id="disclaimer" rows="3" placeholder="Enter compliance text or subtext disclaimers here..." oninput="generateSignature()"></textarea>
+        </div>
+    </div>
+
+    <div class="preview-panel">
+        <h2>Live Preview</h2>
+        <div class="preview-box" id="previewContainer">
+            </div>
+        
+        <button class="btn-copy" onclick="copySignatureToClipboard()">Copy Signature Layout</button>
+        <div class="instructions">
+            <strong>How to deploy:</strong> Click the copy button, then jump over to your mail program's settings box (Outlook, Gmail, Apple Mail) and paste it directly into your signature block.
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
